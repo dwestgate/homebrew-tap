@@ -49,7 +49,20 @@ class Solet < Formula
       "plugins/github_midwife_plugin/knowledge_base/setup_journal.schema.json",
       "plugins/github_midwife_plugin/knowledge_base/setup_adapter_envelope.schema.json",
     ]
-    (libexec/"share"/"solet").install Pathname(__dir__).parent/"solet_cli"/"homebrew"/"seed.lock.json"
+    # Homebrew's build sandbox forbids reading the tap checkout while a Formula
+    # installs. Render the same reviewed lock bytes into the Formula so the
+    # default lock remains non-circular without crossing that sandbox boundary.
+    (libexec/"share"/"solet"/"seed.lock.json").write <<~JSON
+      {
+        "schema_version": 1,
+        "repository": "https://github.com/dwestgate/2026-08-24_local_bizops_test_3933884f2.git",
+        "release_tag": "release-2026-08-24.5",
+        "commit": "66fb46e88d1f31458a4f5e5d24ff9e0895d6f381",
+        "tree_hash": "6994a7f70a210be11d2bd7e7800c0fcf4dcb2ffb",
+        "archive_sha256": "fcdebdd512927671ac92869b6effbac8534ca588e88b28d3608ca1ae2912b23e",
+        "profile": "macos-bizops"
+      }
+    JSON
     # `install_symlink` records a path, not bytes — safe for a source build,
     # where __dir__ resolves to this tap. Do NOT add a `bottle do...end`
     # block without re-solving seed discovery first: a bottle builder's
