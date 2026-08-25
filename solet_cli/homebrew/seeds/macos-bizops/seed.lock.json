@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/dwestgate/2026-08-24_local_bizops_test_3933884f2.git",
+  "release_tag": "release-2026-08-24.5",
+  "commit": "66fb46e88d1f31458a4f5e5d24ff9e0895d6f381",
+  "tree_hash": "6994a7f70a210be11d2bd7e7800c0fcf4dcb2ffb",
+  "archive_sha256": "fcdebdd512927671ac92869b6effbac8534ca588e88b28d3608ca1ae2912b23e",
+  "profile": "macos-bizops"
+}
