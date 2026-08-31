@@ -3,8 +3,8 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r0/solet-0.1.0.tar.gz"
-  sha256 "fcdebdd512927671ac92869b6effbac8534ca588e88b28d3608ca1ae2912b23e"
+  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r1/solet-0.1.0.tar.gz"
+  sha256 "3cad17bbf13e9575ad2dac04a806520eb14a7b058cf47b1ec4e804ea7bd9f7be"
   license "Apache-2.0"
 
   depends_on "git"
@@ -40,6 +40,7 @@ class Solet < Formula
     # as a pinned, checksummed resource instead of assuming the machine has
     # one lying around.
     venv.pip_install resources
+    venv.pip_install buildpath/"solet_setup_contracts", build_isolation: false
     venv.pip_install buildpath/"solet_cli", build_isolation: false
 
     (libexec/"share"/"solet"/"contracts").install Dir[
@@ -55,11 +56,11 @@ class Solet < Formula
     (libexec/"share"/"solet"/"seed.lock.json").write <<~JSON
       {
         "schema_version": 1,
-        "repository": "https://github.com/dwestgate/2026-08-24_local_bizops_test_3933884f2.git",
-        "release_tag": "release-2026-08-24.5",
-        "commit": "66fb46e88d1f31458a4f5e5d24ff9e0895d6f381",
-        "tree_hash": "6994a7f70a210be11d2bd7e7800c0fcf4dcb2ffb",
-        "archive_sha256": "fcdebdd512927671ac92869b6effbac8534ca588e88b28d3608ca1ae2912b23e",
+        "repository": "https://github.com/dwestgate/2026-08-30_local_bizops_e207f4a69.git",
+        "release_tag": "release-2026-08-30",
+        "commit": "a0143367b806428f8aaa4fce064c50e442e8694f",
+        "tree_hash": "5d9f469a9594831b052be253e0f1a5556034ead9",
+        "archive_sha256": "3cad17bbf13e9575ad2dac04a806520eb14a7b058cf47b1ec4e804ea7bd9f7be",
         "profile": "macos-bizops"
       }
     JSON
