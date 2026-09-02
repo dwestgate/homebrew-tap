@@ -3,10 +3,10 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r13/solet-0.1.0.tar.gz"
-  sha256 "e9a212de98fdcd9039421c898b34d2856aa0cb1865c6a67bfd9f97ffa714da99"
+  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r14/solet-0.1.0.tar.gz"
+  sha256 "e9bdd27604a2411d970340b91a047dda63898bd674da9a932cb59bd65be06b9c"
   license "Apache-2.0"
-  revision 12
+  revision 13
   depends_on "git"
   depends_on "python@3.13"
 
@@ -60,7 +60,7 @@ class Solet < Formula
         "release_tag": "release-2026-09-01",
         "commit": "8c830ce734e19e55f710863c12050b661518ba78",
         "tree_hash": "c348a24523c4cfbbff9b38addde316228b199806",
-        "archive_sha256": "e9a212de98fdcd9039421c898b34d2856aa0cb1865c6a67bfd9f97ffa714da99",
+        "archive_sha256": "e9bdd27604a2411d970340b91a047dda63898bd674da9a932cb59bd65be06b9c",
         "profile": "macos-bizops"
       }
     JSON
