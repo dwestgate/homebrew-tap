@@ -3,10 +3,10 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r24/solet-0.1.0.tar.gz"
-  sha256 "4ff955d30c0ce0bd3750b5ef81ea6b1cf4b7748309c5aa14b46ee71d04805efa"
+  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r25/solet-0.1.0.tar.gz"
+  sha256 "be97927511b44389baabb6a389203597899133f56c0bcd8410ae0f0d81b6945a"
   license "Apache-2.0"
-  revision 23
+  revision 24
   depends_on "git"
   depends_on "python@3.13"
 
@@ -57,11 +57,11 @@ class Solet < Formula
     (libexec/"share"/"solet"/"seed.lock.json").write <<~JSON
       {
         "schema_version": 1,
-        "repository": "https://github.com/dwestgate/2026-09-08_local_bizops_c65aa0a4f.git",
+        "repository": "https://github.com/dwestgate/2026-09-08_local_bizops_5e2245d8.git",
         "release_tag": "release-2026-09-08",
-        "commit": "24e328aa47e3a4cd8dbdc95d41b15c4ae4f4eb39",
-        "tree_hash": "e1c7c605edd7ca924235962995150593c94c2813",
-        "archive_sha256": "4ff955d30c0ce0bd3750b5ef81ea6b1cf4b7748309c5aa14b46ee71d04805efa",
+        "commit": "92634d2b505becf51d34313ca8d27ee65151de23",
+        "tree_hash": "5945b51dc4cc7e75a2b1925ca08acd71cbf3d159",
+        "archive_sha256": "be97927511b44389baabb6a389203597899133f56c0bcd8410ae0f0d81b6945a",
         "profile": "macos-bizops"
       }
     JSON
