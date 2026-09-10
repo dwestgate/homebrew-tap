@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "repository": "https://github.com/dwestgate/2026-09-09_local_bizops_da0c12d8.git",
+  "repository": "https://github.com/dwestgate/2026-09-09_local_bizops_85142295.git",
   "release_tag": "release-2026-09-09",
-  "commit": "51dd55ec83ee923e959ccf300ab5d273d32e8a60",
-  "tree_hash": "845350968b190712b736c52846acc2ef9b1dd111",
-  "archive_sha256": "be7bdadd7bc96ff8727266d08d809ffa86f65792ed89c80942f1fb949c95fc22",
+  "commit": "85142295af1cd8816b1ae8c46f440b7c3f4723b0",
+  "tree_hash": "f0ed4c28ea4cae994476ffc685bca5019debee3d",
+  "archive_sha256": "b62a8db49e49a1d9371f00ad2d800a3efc01fb25e6842ee3c9ff699411afa5e9",
   "profile": "macos-bizops"
 }
