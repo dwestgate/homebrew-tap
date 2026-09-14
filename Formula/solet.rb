@@ -3,10 +3,10 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r34/solet-0.1.0.tar.gz"
-  sha256 "33e3a7f5a6acbf55e8696e87dcfad5154b1105448d3f5ecc5327f5cbfa3de668"
+  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r35/solet-0.1.0.tar.gz"
+  sha256 "0e0e5310861e1b038c57cedb49e1bc0fe39fedc73bdb55b0fea4155b7830bd07"
   license "Apache-2.0"
-  revision 33
+  revision 34
   depends_on "git"
   depends_on "python@3.13"
 
@@ -57,12 +57,23 @@ class Solet < Formula
     (libexec/"share"/"solet"/"seed.lock.json").write <<~JSON
       {
         "schema_version": 1,
-        "repository": "https://github.com/dwestgate/2026-09-13_local_bizops_b8b4c9a2.git",
-        "release_tag": "release-2026-09-13",
-        "commit": "b8b4c9a2c45509419b9147cac42904d71075020f",
-        "tree_hash": "b358bba1184a69c31fd6a3c70f2c77e69f07b21c",
-        "archive_sha256": "33e3a7f5a6acbf55e8696e87dcfad5154b1105448d3f5ecc5327f5cbfa3de668",
+        "repository": "https://github.com/dwestgate/2026-09-14_local_bizops_c7027a12.git",
+        "release_tag": "release-2026-09-14-c229a85aa8b9",
+        "commit": "c7027a120748f48892e68bf4a738de29283679ce",
+        "tree_hash": "ecc7dd6db25373490ccaf0760ffac041687d11f4",
+        "archive_sha256": "0e0e5310861e1b038c57cedb49e1bc0fe39fedc73bdb55b0fea4155b7830bd07",
         "profile": "macos-bizops"
+      }
+    JSON
+    # This installed receipt distinguishes a worktree-payload experiment from
+    # a published manager/seed pair.  It is deliberately independent of the
+    # seed lock: the latter authenticates the seed, while this records how the
+    # manager archive itself reached this keg.
+    (libexec/"share"/"solet"/"install-source.json").write <<~JSON
+      {
+        "schema_version": 1,
+        "mode": "release",
+        "source_commit": "c229a85aa8b9375941322e461c79dd1e3532244c"
       }
     JSON
     # `install_symlink` records a path, not bytes — safe for a source build,
@@ -99,6 +110,7 @@ class Solet < Formula
     assert_match '"status": "preview_ready"', preview
     assert_match '"dry_run_writes": 0', preview
     assert_path_exists libexec/"share"/"solet"/"seed.lock.json"
+    assert_path_exists libexec/"share"/"solet"/"install-source.json"
     assert_path_exists libexec/"share"/"solet"/"contracts"/"macos_setup_flow.json"
     refute_path_exists testpath/"Solets"/"brew-test"
   end
