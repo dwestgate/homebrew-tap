@@ -3,10 +3,10 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r36/solet-0.1.0.tar.gz"
-  sha256 "3029b67b58b3059153c85777cc845ef904687c1a49b582631b42b7a1a0da64b3"
+  url "https://github.com/dwestgate/homebrew-tap/releases/download/manager-v0.1.0-r37/solet-0.1.0.tar.gz"
+  sha256 "7384835fa86d28b402eb9162179920d11681834d0f793e7e7d717b5c37077abe"
   license "Apache-2.0"
-  revision 35
+  revision 36
   depends_on "git"
   depends_on "python@3.13"
 
@@ -58,10 +58,10 @@ class Solet < Formula
       {
         "schema_version": 1,
         "repository": "https://github.com/dwestgate/2026-09-14_local_bizops_c7027a12.git",
-        "release_tag": "release-2026-09-14-eebe6f1a8d5a",
-        "commit": "112b8dedd51d6c82b3d0c184857017bffa4e613a",
-        "tree_hash": "73366185ecb0084d830e4dcb3874dd4dc8d1d60b",
-        "archive_sha256": "3029b67b58b3059153c85777cc845ef904687c1a49b582631b42b7a1a0da64b3",
+        "release_tag": "release-2026-09-15-376ca49ccd60",
+        "commit": "36fa8f4f18d4eab33f02bc4f64881588bcac6212",
+        "tree_hash": "59111e6a4730b6ded31ad02b02416807b86da2ff",
+        "archive_sha256": "7384835fa86d28b402eb9162179920d11681834d0f793e7e7d717b5c37077abe",
         "profile": "macos-bizops"
       }
     JSON
@@ -73,7 +73,7 @@ class Solet < Formula
       {
         "schema_version": 1,
         "mode": "release",
-        "source_commit": "eebe6f1a8d5ad6e53809471bae2a9fea203cd6c0"
+        "source_commit": "376ca49ccd606f21269e30416266971c543915e6"
       }
     JSON
     # `install_symlink` records a path, not bytes — safe for a source build,
